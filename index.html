@@ -38,35 +38,40 @@
             <b>身份证号规则：</b>
           </td>
           <td>
-            出生日期：
-            <input type="number" id="startYear" value="" style="width:60px">年
-            <input type="number" id="startMonth" value="" style="width:60px">月
-            <input type="number" id="startDate" value="" style="width:60px">日
-            <div>
-              <form class="form-inline">
-                <div data-toggle="distpicker">
-                  <div class="form-group">
-                    <label class="sr-only" for="province3">Province</label>
-                    身份证属地：
-                    <select class="form-control" id="province3" data-province="—— 省 ——">
-                      <option value="" data-code="">—— 省 ——</option>
-                    </select>
+            <div class="row">
+              <div class="col-md-6">
+                出生日期：
+                <input type="number" id="startYear" value="" style="width:60px">年
+                <input type="number" id="startMonth" value="" style="width:60px">月
+                <input type="number" id="startDate" value="" style="width:60px">日
+                <form class="form-inline">
+                  <div data-toggle="distpicker">
+                    <div class="form-group">
+                      <label class="sr-only" for="province3">Province</label>
+                      身份证属地：
+                      <select class="form-control" id="province3" data-province="—— 省 ——">
+                        <option value="" data-code="">—— 省 ——</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="city3">City</label>
+                      <select class="form-control" id="city3" data-city="—— 市 ——">
+                        <option value="" data-code="">—— 市 ——</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="district3">District</label>
+                      <select class="form-control" id="district3" data-district="—— 区 ——">
+                        <option value="" data-code="">—— 区 ——</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="city3">City</label>
-                    <select class="form-control" id="city3" data-city="—— 市 ——">
-                      <option value="" data-code="">—— 市 ——</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="district3">District</label>
-                    <select class="form-control" id="district3" data-district="—— 区 ——">
-                      <option value="" data-code="">—— 区 ——</option>
-                    </select>
-                  </div>
-                </div>
-              </form>
-              如不选择,则随机从<span id="province"></span>个县级行政区域随机生成
+                </form>
+                如不选择,则随机从<span id="province"></span>个县级行政区域随机生成
+              </div>
+              <div class="col-md-6">
+                <img src="./pic/1.jpg" width="60%">
+              </div>
             </div>
           </td>
         </tr>
@@ -82,7 +87,7 @@
         </tr>
         <tr>
           <td>
-          <b> 条数规则：</b>
+            <b> 条数规则：</b>
           </td>
           <td>
             生成&nbsp<input type="number" min="1" id="branches" value="5" style="width:50px">条
@@ -91,7 +96,7 @@
       </table>
     </div>
     <p>
-    <button type="button" class="btn btn-primary" onclick='genrate()'>生成</button>
+      <button type="button" class="btn btn-primary" onclick='genrate()'>生成</button>
     </p>
     <div id="list">
     </div>
